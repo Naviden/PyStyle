@@ -38,8 +38,8 @@ def color_guide():
 
 
 def text_formatter(text:str,
-                   bc:int=82,
-                   tc:int=0,
+                   bc=None,
+                   tc=None,
                    bold:bool=False,
                    underline:bool=False,
                    reversed:bool=False):
@@ -60,9 +60,9 @@ def text_formatter(text:str,
 
     assert isinstance(text, str), f'text should be string not {type(text)}'
     assert isinstance(
-        bc, int), f'Background color code should be integer not {type(bc)}'
+        bc, (int, type(None))), f'Background color code should be integer not {type(bc)}'
     assert isinstance(
-        tc, int), f'Text color code should be integer not {type(tc)}'
+        tc, (int, type(None))), f'Text color code should be integer not {type(tc)}'
     assert isinstance(
         bold, bool), f'Bold should be Boolean not {type(bold)}'
     assert isinstance(
@@ -70,6 +70,14 @@ def text_formatter(text:str,
     assert isinstance(
         reversed, bool), f'Reversed should be Boolean not {type(reversed)}'
 
+    if bc is not None:
+        bc = f'\u001b[48;5;{bc}m'
+    else:
+        bc = ''
+    if tc is not None:
+        tc = f'\u001b[38;5;{tc}m'
+    else:
+        tc = ''
     if bold:
         b = '\u001b[1m'
     else:
@@ -83,4 +91,7 @@ def text_formatter(text:str,
     else:
         r = ''
 
-    return(f'{b}{u}{r}\u001b[48;5;{bc}m\u001b[38;5;{tc}m{text}\u001b[0m')
+    return(f'{b}{u}{r}{bc}{tc}{text}\u001b[0m')
+
+# a = text_formatter('asghar',bold=True, underline=False, reversed=True )
+# print(a)
