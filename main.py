@@ -1,6 +1,12 @@
 
 def color_guide():
-    """shows color code guide"""
+    """shows color code guide
+
+        The color codes should be used in text_formatter() function
+
+        Prints:
+             Codes and color previews of Standard, High-intensity and Grayscale color
+    """
     print('\n')
     print('\u001b[1mStandard Colors\u001b[0m\n')
     for j in range(0, 8):
@@ -31,12 +37,26 @@ def color_guide():
     print("\u001b[0m")
 
 
-def text_formatter(text,
-                   bc=82,
-                   tc=0,
-                   bold=False,
-                   underline=False,
-                   reversed=False):
+def text_formatter(text:str,
+                   bc:int=82,
+                   tc:int=0,
+                   bold:bool=False,
+                   underline:bool=False,
+                   reversed:bool=False):
+    """Add requested style to the fgiven string.
+
+    Adds ANSI Escape codes to add text color, background color and 
+    other decorations like bold, undeline and reversed
+
+    Args: 
+        text: target string
+        bc: Background color code (int)
+        tc: Text color code (int)
+        bold: if True makes the given string bold
+        underline: if True makes the given string undelined
+        reversed: if True revreses the background and text colors
+
+    """
 
     assert isinstance(text, str), f'text should be string not {type(text)}'
     assert isinstance(
