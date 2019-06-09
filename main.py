@@ -1,5 +1,6 @@
 
 def color_guide():
+    """shows color code guide"""
     print('\n')
     print('\u001b[1mStandard Colors\u001b[0m\n')
     for j in range(0, 8):
@@ -29,9 +30,26 @@ def color_guide():
         print(f"\u001b[48;5;{code}m {code.ljust(5)}", end='')
     print("\u001b[0m")
 
-color_guide()
 
-def text_formatter(text, bc=82, tc=0, bold=False, underline=False, reversed=False):
+def text_formatter(text,
+                   bc=82,
+                   tc=0,
+                   bold=False,
+                   underline=False,
+                   reversed=False):
+
+    assert isinstance(text, str), f'text should be string not {type(text)}'
+    assert isinstance(
+        bc, int), f'Background color code should be integer not {type(bc)}'
+    assert isinstance(
+        tc, int), f'Text color code should be integer not {type(tc)}'
+    assert isinstance(
+        bold, bool), f'Bold should be Boolean not {type(bold)}'
+    assert isinstance(
+        underline, bool), f'Underline should be Boolean not {type(underline)}'
+    assert isinstance(
+        reversed, bool), f'Reversed should be Boolean not {type(reversed)}'
+
     if bold:
         b = '\u001b[1m'
     else:
@@ -46,3 +64,6 @@ def text_formatter(text, bc=82, tc=0, bold=False, underline=False, reversed=Fals
         r = ''
 
     return(f'{b}{u}{r}\u001b[48;5;{bc}m\u001b[38;5;{tc}m{text}\u001b[0m')
+
+
+# color_guide()
