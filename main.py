@@ -84,6 +84,3 @@ def text_formatter(text:str,
         r = ''
 
     return(f'{b}{u}{r}\u001b[48;5;{bc}m\u001b[38;5;{tc}m{text}\u001b[0m')
-
-
-# color_guide()
