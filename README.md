@@ -4,7 +4,10 @@ A simple library which add colors and decorations(Formatting) to Python output, 
 
 ## Getting started
 clone the repository
-`git clone https://github.com/Naviden/PyStyle.git`
+```
+git clone https://github.com/Naviden/PyStyle.git
+
+```
 copy the PyStyle.py file in the folder you have your .py/.ipynb file(s)
 `cd PyStyle`
 `cp PyStyle.py path_to_your project`
