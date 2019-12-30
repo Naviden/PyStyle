@@ -1,4 +1,4 @@
-![color_guide_screenshot](https://github.com/Naviden/PyStyle/blob/master/images/logo.png)
+![color_guide_screenshot](https://github.com/Naviden/PyStyle/blob/master/images/logo.png =100x)
 # PyStyle
 
 A simple Python script which uses ASCII escape codes to add colors and decorations(Formatting) to Python output, regardless of the way you run your code (Terminal, Jupyter Notebook,...)
