@@ -21,3 +21,4 @@ see the color guide:
 ```
 ps.color_guide()
 ```
+![color_guide_screenshot](https://github.com/Naviden/PyStyle/blob/master/images/color_guide.png)
