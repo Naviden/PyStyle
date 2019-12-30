@@ -1,6 +1,6 @@
 # PyStyle
 
-A simple Python script which add colors and decorations(Formatting) to Python output, regardless of the way you run your code (Terminal, Jupyter Notebook,...)
+A simple Python script which uses ASCII escape codes to add colors and decorations(Formatting) to Python output, regardless of the way you run your code (Terminal, Jupyter Notebook,...)
 
 ## Getting started
 clone the repository:
